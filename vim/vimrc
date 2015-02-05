@@ -3,3 +3,12 @@ set background=dark
 
 set expandtab
 set tabstop=4
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'wting/rust.vim'
+call vundle#end()
+filetype plugin indent on

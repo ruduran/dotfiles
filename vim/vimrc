@@ -9,7 +9,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'wting/rust.vim'
+Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 call vundle#end()
 filetype plugin indent on

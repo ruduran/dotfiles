@@ -13,4 +13,4 @@ if [ -f ~/.gitconfig ]; then
     cp ~/.gitconfig ~/.gitconfig.back
 fi
 
-sed -e "s/%FULLNAME%/$1/" -e "s/%EMAIL%/$2/" gitconfig > ~/.gitconfig
+sed -e "s/%FULLNAME%/$1/" -e "s/%EMAIL%/$2/" -e "s|%HOME%|$HOME|" gitconfig > ~/.gitconfig

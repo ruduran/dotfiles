@@ -11,7 +11,7 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [core]
-    excludesfile = /home/neru/.gitignore
+    excludesfile = %HOME%/.gitignore
     editor = vim
 
 [push]

@@ -6,6 +6,8 @@ if [ -f ~/.vimrc ]; then
     cp ~/.vimrc ~/.vimrc.back
 fi
 
-cp vimrc ~/.vimrc
+dir=$(dirname $0)
+
+cp $dir/vimrc ~/.vimrc
 
 echo "You should now run 'vim +PluginInstall +qall' to install the plugin(s)."

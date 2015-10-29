@@ -4,7 +4,8 @@
 
 [alias]
     ci = commit
-    st = status -sb
+    s = status -sb
+    st = status
     co = checkout
     df = diff
     dc = diff --cached

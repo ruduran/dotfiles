@@ -9,6 +9,12 @@ Git
 * Run 'apply.sh'
 * TODO: Bash prompt showing the current branch in the repo
 
+tmux
+----
+
+* Run 'apply.sh'
+* You will probably need to run tmux with the '-2' option to use de 256 colors.
+
 Vim
 ---
 

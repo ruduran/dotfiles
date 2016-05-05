@@ -3,6 +3,7 @@
     email = %EMAIL%
 
 [alias]
+    f = fetch
     ci = commit
     s = status -sb
     st = status
@@ -10,38 +11,28 @@
     df = diff
     dc = diff --cached
     ds = diff --stat
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    dcs = diff --cached --stat
+    w = worktree
 
-    # This command squashes the last commits into one and prepopulates its
-    # commit message with the old ones
-    # An argument must be provided with the number of commits to compress,
-    # for instance 'git cc 4' will join the last 4 commits
-    # If the number is not greater than 1, no actions will be taken
-    # Note: This will not work if you try to squash the first commit
-    #       of a repository.
-    cc = "!compress() { \
-                if [ $# -gt 0 ]; then \
-                    commits_to_compress=$1; \
-                    if [ 0$commits_to_compress -gt 1 ]; then \
-                        git reset --hard HEAD~$commits_to_compress; \
-                        git merge --squash HEAD@{1}; \
-                        git commit; \
-                    fi; \
-                else \
-                    echo 'Usage: git cc number_of_commits_to_compress'; \
-                fi; \
-           }; \
-           compress"
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [core]
     excludesfile = %HOME%/.gitignore
     editor = vim
+
+[remote "origin"]
+    tagopt = --tags
+    prune = true
 
 [push]
     default = upstream
 
 [pull]
     rebase = true
+
+[rebase]
+    stat = true
+    autoStash = true
 
 [color]
     branch = auto
@@ -61,5 +52,3 @@
     changed = green
     untracked = cyan
 
-[remote "origin"]
-    prune = true

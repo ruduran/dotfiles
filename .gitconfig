@@ -1,6 +1,6 @@
 [user]
-    name = %FULLNAME%
-    email = %EMAIL%
+    name = Rubén Durán Balda
+    email = ruduran@users.noreply.github.com
 
 [alias]
     f = fetch
@@ -18,7 +18,7 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [core]
-    excludesfile = %HOME%/.gitignore
+    excludesfile = ~/.gitignore
     editor = vim
 
 [remote "origin"]

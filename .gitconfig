@@ -21,9 +21,6 @@
     excludesfile = ~/.gitignore
     editor = vim
 
-[remote "origin"]
-    tagopt = --tags
-
 [push]
     default = upstream
     followTags = true
@@ -33,7 +30,9 @@
 
 [fetch]
     prune = true
-    pruneTags = true
+
+[remote "origin"]
+    tagopt = --no-tags
 
 [rebase]
     stat = true

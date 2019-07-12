@@ -1,0 +1,14 @@
+plugins=(
+jump
+git
+gitfast
+sudo
+man
+brew
+tmux
+tmuxinator
+python
+docker
+docker-compose
+zsh-autosuggestions
+)

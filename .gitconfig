@@ -8,6 +8,10 @@
     s = status -sb
     st = status
     co = checkout
+    sw = switch
+    r = restore
+    u = restore -S
+    rs = restore -s HEAD -SW
     df = diff
     dc = diff --cached
     ds = diff --stat

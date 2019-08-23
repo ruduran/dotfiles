@@ -8,7 +8,7 @@ export ZSH=~/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -33,3 +33,6 @@ source ~/github/z/z.sh
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

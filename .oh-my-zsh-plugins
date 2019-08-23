@@ -11,4 +11,7 @@ python
 docker
 docker-compose
 zsh-autosuggestions
+kubectl
+colored-man-pages
+zsh_reload
 )

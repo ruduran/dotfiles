@@ -36,3 +36,7 @@ export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+alias upgrade_z="echo \"Upgrading Z\" && ( cd ~/github/z && git pull )"
+alias upgrade_p10k="echo \"Upgrading Powerlevel10k\" && ( cd $ZSH_CUSTOM/themes/powerlevel10k && git pull )"
+alias upgrade="upgrade_oh_my_zsh && upgrade_p10k; upgrade_z; brew upgrade"

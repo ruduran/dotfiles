@@ -5,6 +5,7 @@
 [alias]
     f = fetch
     ci = commit
+    cs = "!f() { git stash --keep-index && git commit $@ && git stash pop; }; f"
     s = status -sb
     st = status
     co = checkout

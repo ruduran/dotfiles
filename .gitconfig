@@ -46,6 +46,10 @@
     stat = true
     autoStash = true
 
+[feature]
+    manyFiles = true
+    experimental = true
+
 [color]
     branch = auto
     status = auto

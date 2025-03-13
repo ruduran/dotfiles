@@ -2,6 +2,9 @@
     name = Rubén Durán Balda
     email = ruduran@users.noreply.github.com
 
+[includeIf "gitdir:~/repos/work/"]
+    path = ~/.gitconfig.work
+
 [alias]
     f = fetch
     ci = commit
@@ -20,7 +23,10 @@
     w = worktree
     cp = cherry-pick
 
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    prunable-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}'
+    prune-branches = !git prunable-branches | xargs -r git branch -d
+    force-prune-branches = !git prunable-branches | xargs -r git branch -D
 
 [core]
     excludesfile = ~/.gitignore
@@ -45,6 +51,9 @@
 [rebase]
     stat = true
     autoStash = true
+
+[rerere]
+    enabled = true
 
 [feature]
     manyFiles = true

@@ -1,5 +1,4 @@
 plugins=(
-omz-plugin
 git
 gitfast
 sudo
@@ -7,10 +6,8 @@ man
 tmux
 tmuxinator
 python
-docker
+zsh-pyenv
 zsh-autosuggestions
-kubectl
-skaffold
 colored-man-pages
-zsh_reload
+z
 )
